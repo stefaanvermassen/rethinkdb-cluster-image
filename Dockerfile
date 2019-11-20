@@ -15,8 +15,8 @@
 FROM rethinkdb:2.3.6
 MAINTAINER Stefaan Vermassen <stefaanvermassen@gmail.com>
 
-RUN apt-get update && \
-    apt-get install -yq apt-transport-https && \
+RUN apt-get install -yq apt-transport-https && \
+    apt-get update && \
     apt-get install -yq curl && \
     rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/*
 
