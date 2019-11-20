@@ -16,6 +16,8 @@ FROM rethinkdb:2.3.6
 MAINTAINER Stefaan Vermassen <stefaanvermassen@gmail.com>
 
 COPY ./files/apt-transport-https_1.0.9.8.4_amd64.deb .
+COPY ./files/libcurl3-gnutls_7.38.0-4+deb8u11_amd64.deb .
+RUN dpkg -i libcurl3-gnutls_7.38.0-4+deb8u11_amd64.deb
 RUN dpkg -i apt-transport-https_1.0.9.8.4_amd64.deb
 RUN apt-get update && \
     apt-get install -yq curl && \
