@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM rethinkdb:2.3.5
+FROM rethinkdb:2.3.6
 MAINTAINER Stefaan Vermassen <stefaanvermassen@gmail.com>
 
 COPY ./files/apt-transport-https_1.0.9.8.4_amd64.deb .
@@ -29,7 +29,7 @@ RUN chmod +x /usr/bin/jq
 ADD https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64 /usr/local/bin/dumb-init
 RUN chmod +x /usr/local/bin/dumb-init
 
-COPY ./files/run.sh ./rethinkdb-probe/rethinkdb-probe /
+COPY ./files/run.sh ./rethinkdb-probe /
 RUN chmod u+x /run.sh /rethinkdb-probe
 
 ENTRYPOINT ["/usr/local/bin/dumb-init", "/run.sh"]
