@@ -33,5 +33,6 @@ COPY ./files/run.sh /
 COPY ./rethinkdb-probe /rethinkdb-probe
 RUN chmod u+x /run.sh
 RUN chmod u+x /rethinkdb-probe
+RUN ls /
 
 ENTRYPOINT ["/usr/local/bin/dumb-init", "/run.sh"]
