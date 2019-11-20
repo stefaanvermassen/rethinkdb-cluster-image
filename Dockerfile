@@ -31,8 +31,8 @@ RUN chmod +x /usr/local/bin/dumb-init
 
 COPY ./files/run.sh /
 COPY ./rethinkdb-probe /rethinkdb-probe
-RUN chmod u+x /run.sh
-RUN chmod u+x /rethinkdb-probe
+RUN chmod 777 /run.sh
+RUN chmod 777 /rethinkdb-probe
 RUN /usr/local/bin/dumb-init pwd
 RUN /usr/local/bin/dumb-init ls
 
