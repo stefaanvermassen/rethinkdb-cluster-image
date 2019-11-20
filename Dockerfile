@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM rethinkdb:2.3.6
+FROM rethinkdb:2.3.5
 MAINTAINER Stefaan Vermassen <stefaanvermassen@gmail.com>
 
 COPY ./files/apt-transport-https_1.0.9.8.4_amd64.deb .
