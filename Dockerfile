@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM rethinkdb:2.3.5
+FROM rethinkdb:2.3.6
 MAINTAINER Stefaan Vermassen <stefaanvermassen@gmail.com>
 
+RUN cat /etc/apt/sources.list
 RUN apt-get update && \
     apt-get install -yq curl && \
     rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/*
