@@ -12,11 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM rethinkdb:2.3.6
+FROM rethinkdb:2.3.5
 MAINTAINER Stefaan Vermassen <stefaanvermassen@gmail.com>
 
-RUN apt-get install -yq apt-transport-https && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get install -yq curl && \
     rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/*
 
