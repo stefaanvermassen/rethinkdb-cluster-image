@@ -15,7 +15,7 @@
 FROM rethinkdb:2.3.6
 MAINTAINER Stefaan Vermassen <stefaanvermassen@gmail.com>
 
-RUN cat /etc/apt/sources.list
+RUN wget http://ftp.br.debian.org/debian/pool/main/a/apt/apt-transport-https_1.0.9.8.4_amd64.deb && dpkg -i apt-transport-https_1.0.9.8.4_amd64.deb
 RUN apt-get update && \
     apt-get install -yq curl && \
     rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/*
