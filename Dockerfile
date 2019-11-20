@@ -30,7 +30,7 @@ ADD https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_a
 RUN chmod +x /usr/local/bin/dumb-init
 
 COPY ./files/run.sh /
-COPY ./rethinkdb-probe /
+COPY ./rethinkdb-probe /rethinkdb-probe
 RUN chmod u+x /run.sh
 RUN chmod u+x /rethinkdb-probe
 
